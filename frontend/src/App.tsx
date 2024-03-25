@@ -1,17 +1,22 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Container from "./components/commen/Container";
+import Navbar from "./components/navbar/Navbar";
+import { sampleProducts } from "./data";
 
-function App() {
+export default function App() {
   return (
-    <div className="">
-      <Button color="white" className="white">
-        hi
-      </Button>
-      <header>Amazon clone</header>
-      <main></main>
-      <footer>The copy rights are reserved</footer>
+    <div className="flex flex-col vh-full">
+      <div className="bg-primary  text-secondary">
+        <Container className="">
+          <Navbar />
+        </Container>
+      </div>
+      <Container className="mt-3">
+        <Main />
+      </Container>
+      <Footer />
     </div>
   );
 }
-
-export default App;
