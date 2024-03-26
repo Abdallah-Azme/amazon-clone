@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 
 export default function App() {
   return (
-    <div className="flex flex-col vh-full">
+    <div className="flex flex-col min-h-screen relative">
       <div className="bg-primary text-secondary">
         <Container className="">
           <Navbar />

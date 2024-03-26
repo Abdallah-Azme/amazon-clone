@@ -1,11 +1,15 @@
-import { sampleProducts } from "@/data";
+import { Product } from "@/types/product";
 import { Link } from "react-router-dom";
 
-export default function Main() {
+type MainProps = {
+  products: Product[];
+};
+
+export default function Main({ products }: MainProps) {
   return (
     <main className="">
       <ul className="grid grid-cols-12 gap-2">
-        {sampleProducts.map((product) => (
+        {products.map((product) => (
           <Link
             to={"/product/" + product.slug}
             key={product.slug}
